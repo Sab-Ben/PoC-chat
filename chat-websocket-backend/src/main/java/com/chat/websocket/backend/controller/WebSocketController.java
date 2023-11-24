@@ -1,6 +1,6 @@
 package com.chat.websocket.backend.controller;
 
-import com.chat.websocket.backend.model.ChatMessage;
+import com.chat.websocket.backend.dto.ChatMessage;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
@@ -14,7 +14,7 @@ public class WebSocketController {
     @MessageMapping("/chat/{roomId}")
     @SendTo("/topic/{roomId}")
 
-    public ChatMessage chat(@DestinationVariable ChatMessage message) {
+    public ChatMessage chat(@DestinationVariable String roomId, ChatMessage message) {
         return new ChatMessage(message.getMessage(), message.getUser());
     }
 
