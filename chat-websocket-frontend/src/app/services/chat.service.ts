@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import {ChatMessage} from "../models/chat-message";
 import {BehaviorSubject} from "rxjs";
 import {Stomp} from "@stomp/stompjs";
-import { Client } from '@stomp/stompjs';
 import * as SockJS from "sockjs-client";
+import {Message} from "stompjs";
 
 @Injectable({
   providedIn: 'root'
@@ -20,12 +20,12 @@ export class ChatService {
   initConnectionSocket() {
     const url = '//localhost:8080/chat-websocket';
     const socket = new SockJS(url);
-    this.stompClient = Stomp.over(socket)
+    this.stompClient = Stomp.over(socket);
   }
 
   joinRoom(roomId: string) {
     this.stompClient.connect({}, ()=>{
-      this.stompClient.subscribe(`/topic/${roomId}`, (messages: any) => {
+      this.stompClient.subscribe(`/topic/${roomId}`, (messages: Message) => {
         const messageContent = JSON.parse(messages.body);
         const currentMessage = this.messageSubject.getValue();
         currentMessage.push(messageContent);
