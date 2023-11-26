@@ -10,8 +10,8 @@ body {
 .chat_window {
   position: absolute;
   width: calc(100% - 20px);
-  max-width: 600px;
-  height: 510px;
+  max-width: 30%;
+  height: auto;
   border-radius: 20px;
   background-color: #fff;
   left: 50%;
@@ -207,4 +207,20 @@ body {
 
 .message_template {
   display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .chat_window {
+    max-width: 90%;
+  }
+
+  .top_menu .title img {
+    margin-left: 10px; /* Adjust as needed */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .bottom_wrapper .message_input_wrapper {
+    width: calc(100% - 20px);
+  }
 }
