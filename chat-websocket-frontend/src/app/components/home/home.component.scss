@@ -11,3 +11,18 @@ h4 {
 button {
   margin-top:50px;
 }
+
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h4 {
+    margin-top: 30px;
+  }
+
+  button {
+    margin-top: 30px;
+  }
+}

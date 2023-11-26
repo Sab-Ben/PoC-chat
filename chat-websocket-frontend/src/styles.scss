@@ -17,3 +17,24 @@ header {
   height: auto;
   text-align: center;
 }
+
+@media only screen and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  header {
+    margin-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  .img-row {
+    text-align: center;
+  }
+
+  .img {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+}

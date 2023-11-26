@@ -10,8 +10,8 @@ body {
 .chat_window {
   position: absolute;
   width: calc(100% - 20px);
-  max-width: 30%;
-  height: auto;
+  max-width: 600px;
+  height: 510px;
   border-radius: 20px;
   background-color: #fff;
   left: 50%;
@@ -215,7 +215,7 @@ body {
   }
 
   .top_menu .title img {
-    margin-left: 10px; /* Adjust as needed */
+    margin-left: 10px;
   }
 }
 
