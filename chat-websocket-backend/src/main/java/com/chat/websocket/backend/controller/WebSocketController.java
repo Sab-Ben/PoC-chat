@@ -1,8 +1,10 @@
 package com.chat.websocket.backend.controller;
 
-import com.chat.websocket.backend.dto.ChatMessage;
+import com.chat.websocket.backend.dto.ChatMessageDto;
+import com.chat.websocket.backend.service.ChatMessageService;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,11 +13,17 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "*", maxAge = 3600)
 public class WebSocketController {
 
+    private final ChatMessageService chatMessageService;
+
+    public WebSocketController(ChatMessageService chatMessageService) {
+        this.chatMessageService = chatMessageService;
+    }
+
     @MessageMapping("/chat/{roomId}")
     @SendTo("/topic/{roomId}")
 
-    public ChatMessage chat(@DestinationVariable String roomId, ChatMessage message) {
-        return new ChatMessage(message.getMessage(), message.getUser());
+    public ChatMessageDto chat(@DestinationVariable String roomId, @Payload ChatMessageDto message) {
+        return this.chatMessageService.chat(message);
     }
 
 }

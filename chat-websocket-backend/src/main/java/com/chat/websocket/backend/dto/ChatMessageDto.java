@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class ChatMessage {
+public class ChatMessageDto {
     String message;
     String user;
 }
