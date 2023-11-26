@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
-public class WebSocketController {
+public class ChatMessageController {
 
     private final ChatMessageService chatMessageService;
 
-    public WebSocketController(ChatMessageService chatMessageService) {
+    public ChatMessageController(ChatMessageService chatMessageService) {
         this.chatMessageService = chatMessageService;
     }
 
