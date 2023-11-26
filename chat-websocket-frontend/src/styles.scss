@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+.img-row {
+  text-align: center;
+}
+
+.img {
+  width: auto;
+  height: auto;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  header {
+    margin-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  .img-row {
+    text-align: center;
+  }
+
+  .img {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+}
