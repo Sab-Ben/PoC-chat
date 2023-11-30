@@ -35,19 +35,19 @@ From MySQL terminal: Use the command SOURCE </absolute/path/to/script>
 ## Build
 ### For BackEnd App :
 With IntelliJ IDE, open the file pom.xml as a project inside the folder back, click at top right on the IDE on 
-Maven -> Developpez-une-application-full-stack-complete -> Lifecycle -> clean and after build -> install.
+Maven -> Poc-chat -> Lifecycle -> clean and after build -> install.
 With Eclipse IDE, import your project with Maven and choose existing maven project to find the file pom.xml,
 then right-click on the project and choose update the project, right-click agin and choose maven clean and after build maven install.
 
 ### For FrontEnd App :
-Use command line inside the folder front `npm install` to install nodes_modules.
+Use command  `cd chat-websocket-frontend`, then use commande line `npm install` to install nodes_modules.
 
 ## Development server
 ### For Backend App :
-Run the project at MddapiApplication (where annotation @SpringBootApplication appears).
+Run the project at ChatWebsocketBackendApplication (where annotation @SpringBootApplication appears).
 
 ### For FrontEnd App :
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+Run `ng serve` for a dev server inside folder chat-websocket-front. Navigate to `http://localhost:4200/`.
 Open two windows, one as a client and one as a support, to set up the exchange. 
 
 ## Licensing
