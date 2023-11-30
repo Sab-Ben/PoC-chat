@@ -34,7 +34,7 @@ From MySQL terminal: Use the command SOURCE </absolute/path/to/script>
 
 ## Build
 ### For BackEnd App :
-With IntelliJ IDE, open the file pom.xml as a project inside the folder back, click at top right on the IDE on 
+With IntelliJ IDE, open the file pom.xml as a project inside the folder chat-websocket-backend, click at top right on the IDE on 
 Maven -> Poc-chat -> Lifecycle -> clean and after build -> install.
 With Eclipse IDE, import your project with Maven and choose existing maven project to find the file pom.xml,
 then right-click on the project and choose update the project, right-click agin and choose maven clean and after build maven install.
