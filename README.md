@@ -7,6 +7,7 @@ PoC-chat is a proof of concept about the the ability to communicate with custome
 - Java 17+
 - SpringBoot v3.0.4
 - WebSocket
+- MySQL v.8
 - Maven (installed on your system or available with your IDE)
 
 ## Authors
