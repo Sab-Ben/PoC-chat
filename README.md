@@ -6,7 +6,7 @@ PoC-chat is a proof of concept about the the ability to communicate with custome
 - Angular CLI v16+
 - Java 17+
 - SpringBoot v3.0.4
-- MySQL v8.0
+- WebSocket
 - Maven (installed on your system or available with your IDE)
 
 ## Authors
