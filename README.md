@@ -50,6 +50,3 @@ Run the project at ChatWebsocketBackendApplication (where annotation @SpringBoot
 ### For FrontEnd App :
 Run `ng serve` for a dev server inside folder chat-websocket-front. Navigate to `http://localhost:4200/`.
 Open two windows, one as a client and one as a support, to set up the exchange. 
-
-## Licensing
-This project was created by OpenClassrooms for the training course "Développeur Fullstack Java-Angular".
